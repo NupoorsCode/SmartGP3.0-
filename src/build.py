@@ -203,28 +203,65 @@ def footer():
     cols = ""
     for headi, links in FOOTER_NAV:
         ls = "".join('<li><a href="%s">%s</a></li>' % (u, e(t)) for u, t in links)
-        cols += "<div><h2>%s</h2><ul>%s</ul></div>" % (e(headi), ls)
+        cols += '<div class="foot-col"><h2>%s</h2><ul>%s</ul></div>' % (e(headi), ls)
     b = BRAND
     return f"""<footer class="footer">
   <div class="wrap">
     <div class="foot-grid">
-      <div>
-        <div class="foot-logo">
-          <img src="/assets/img/smartgp-logo-960.png" width="132" height="37"
-               alt="SmartGP" loading="lazy">
-        </div>
-        <p style="max-width:34ch;color:#9FBDB5">{e(b['tagline'])}. Dispensing and delivery by SmartRx Pharmacy.</p>
-        <p style="color:#F0CFCF;margin-top:18px"><b>In an emergency call 999.</b><br>For urgent advice call NHS 111.</p>
+
+      <div class="foot-brand">
+        <img src="/assets/img/smartgp-logo-960.png" width="150" height="42"
+             alt="SmartGP" loading="lazy" class="foot-logo">
+        <p>{e(b['blurb'])}</p>
+        <p class="foot-people">
+          <b>Owner:</b> {e(b['owner'])}<br>
+          <b>Superintendent Pharmacist:</b> {e(b['superintendent'])}<br>
+          (GPhC Number: {e(b['superintendent_reg'])})
+        </p>
       </div>
+
       {cols}
+
+      <div class="foot-col">
+        <h2>Contact Us</h2>
+        <ul class="foot-contact">
+          <li><span class="fi" aria-hidden="true">&#9742;</span>
+              <a href="tel:{e(b['phone_href'])}">{e(b['phone'])}</a></li>
+          <li><span class="fi" aria-hidden="true">&#9993;</span>
+              <a href="mailto:{e(b['email'])}">{e(b['email'])}</a></li>
+          <li><span class="fi" aria-hidden="true">&#9200;</span>
+              <span>{e(b['hours'])}</span></li>
+          <li><span class="fi" aria-hidden="true">&#9679;</span>
+              <address>{e(b['company'])}<br>10 Lyon Road, London SW19 2RL</address></li>
+        </ul>
+      </div>
+
     </div>
-    <div class="foot-reg">
-      <b>{e(b['company'])}</b> &middot; Registered in England and Wales, company number {e(b['company_no'])} &middot; Registered office: {e(b['office'])}<br>
-      Registered pharmacy premises: GPhC number {e(b['gphc'])} &mdash; <a href="https://www.pharmacyregulation.org/registers" rel="noopener">check the register</a> &middot;
-      Superintendent Pharmacist: {e(b['superintendent'])}, {e(b['superintendent_reg'])}<br>
-      Prescribing clinicians are registered with the GPhC, GMC or NMC &middot; CQC: {e(b['cqc'])} &middot;
-      <a href="/legal/complaints/">Complaints</a> &middot; <a href="/legal/accessibility/">Accessibility</a> &middot; <a href="/legal/privacy/">Privacy</a>
-      <br><span style="opacity:.7">Prototype build &mdash; indicative content and prices, not for publication.</span>
+
+    <div class="foot-reg-row">
+      <div class="foot-regbox">
+        <p class="foot-regno">Registration No.: {e(b['gphc'])}</p>
+        <a class="foot-verify" href="{e(b['gphc_url'])}"
+           target="_blank" rel="noopener noreferrer">
+          Verify registration status
+          <span aria-hidden="true">&#8599;</span>
+          <span class="visually-hidden">(opens the GPhC register in a new tab)</span>
+        </a>
+      </div>
+      <p class="foot-emergency"><b>In an emergency call 999.</b><br>
+        For urgent advice call NHS 111.</p>
+    </div>
+  </div>
+
+  <div class="foot-bottom">
+    <div class="wrap">
+      <p>To check the registration status of the pharmacy or the Superintendent
+        Pharmacist, please visit:<br>
+        <a href="https://www.pharmacyregulation.org/registers"
+           target="_blank" rel="noopener noreferrer">https://www.pharmacyregulation.org/registers</a></p>
+      <p>&copy; Copyright {e(b['company'])} 2026. All rights reserved.
+        Registered in England and Wales, company number {e(b['company_no'])}.</p>
+      <p class="foot-proto">Prototype build &mdash; indicative content and prices, not for publication.</p>
     </div>
   </div>
 </footer>
