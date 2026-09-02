@@ -230,17 +230,47 @@ td b{font-weight:600}
 .num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
 
 /* ---------- Footer ---------- */
-.footer{background:var(--ink);color:#9FBDB5;padding:70px 0 30px;font-size:.9rem}
-.footer h2,.footer h3{color:#fff;font-size:.76rem;font-family:var(--f-mono);letter-spacing:.14em;text-transform:uppercase;margin-bottom:16px;font-weight:500}
+.footer{background:var(--ink);color:#9FBDB5;padding:70px 0 0;font-size:.9rem}
+.footer h2{color:#fff;font-size:1.05rem;font-family:var(--f-display);font-weight:500;
+  letter-spacing:0;text-transform:none;margin:0 0 14px;padding-bottom:10px;
+  border-bottom:2px solid var(--teal);display:inline-block;min-width:120px}
 .footer ul{list-style:none;margin:0;padding:0}
 .footer a{color:#CFE3DD;text-decoration:none;display:inline-block;padding:5px 0}
 .footer a:hover{color:#fff;text-decoration:underline}
-.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px}
-@media (max-width:880px){.foot-grid{grid-template-columns:1fr 1fr}}
-.foot-logo img{width:132px;height:37px;margin-bottom:14px}
-.foot-reg{margin-top:44px;padding-top:26px;border-top:1px solid #24413A;font-size:.8rem;line-height:1.75;color:#8FB0A8}
-.foot-reg b{color:#CFE3DD}
-.foot-reg a{display:inline;padding:0}
+.foot-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:40px}
+@media (max-width:980px){.foot-grid{grid-template-columns:1fr 1fr;gap:32px}}
+@media (max-width:600px){.foot-grid{grid-template-columns:1fr}}
+
+.foot-logo{width:150px;height:42px;margin-bottom:16px}
+.foot-brand p{max-width:36ch;line-height:1.6}
+.foot-people{margin-top:18px;color:#CFE3DD}
+.foot-people b{color:#fff}
+
+.foot-contact li{display:flex;gap:10px;align-items:flex-start;margin-bottom:6px}
+.foot-contact .fi{color:var(--teal-soft);flex:none;line-height:1.7;font-size:.95rem}
+.foot-contact address{font-style:normal;padding:5px 0;line-height:1.5}
+
+/* Registration block. The premises number and the verify link are a regulatory
+   requirement (FR-WEB-17), so they sit above the fold of the footer rather
+   than in the small print. */
+.foot-reg-row{display:flex;gap:28px;align-items:center;flex-wrap:wrap;
+  margin-top:44px;padding-top:28px;border-top:1px solid #24413A}
+.foot-regbox{border:1px solid #24413A;background:#11322B;border-radius:var(--r-m);
+  padding:16px 20px;min-width:280px}
+.foot-regno{color:#fff;font-weight:700;margin:0 0 10px;font-size:.95rem}
+.foot-verify{display:inline-flex !important;align-items:center;gap:8px;
+  background:var(--teal);color:#fff !important;border-radius:999px;
+  padding:9px 16px !important;font-size:.85rem;font-weight:600;min-height:40px}
+.foot-verify:hover{background:var(--teal-soft);color:var(--ink) !important;
+  text-decoration:none !important}
+.foot-emergency{margin:0;color:#F0CFCF}
+.foot-emergency b{color:#fff}
+
+.foot-bottom{background:#071310;margin-top:36px;padding:24px 0;text-align:center;
+  font-size:.82rem;line-height:1.7;color:#8FB0A8}
+.foot-bottom p{margin:0 0 6px;max-width:none}
+.foot-bottom a{display:inline;padding:0;color:#7FC9BF;word-break:break-word}
+.foot-proto{opacity:.65;margin-top:10px !important}
 
 /* ---------- Journey shell ---------- */
 .journey{display:grid;grid-template-columns:268px 1fr;gap:52px;align-items:start;padding:48px 0 96px}
