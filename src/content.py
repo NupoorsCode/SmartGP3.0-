@@ -38,33 +38,26 @@ NAV = [
     ("/contact/", "Contact us"),
 ]
 
+# Two columns, as on SmartRx: "Pages" for the site, "Links" for policy and
+# service pages. Complaints and the accessibility statement stay in Links
+# because FR-WEB-17 requires both to be reachable from every page.
 FOOTER_NAV = [
-    ("Clinic", [
+    ("Pages", [
+        ("/about/", "Who we are"),
         ("/treatments/", "Treatments"),
-        ("/treatments/mounjaro-tirzepatide/", "Mounjaro (tirzepatide)"),
-        ("/treatments/wegovy-semaglutide-injection/", "Wegovy injection"),
         ("/pricing/", "Pricing"),
-        ("/consultation/", "Start a consultation"),
-    ]),
-    ("About us", [
-        ("/about/", "About SmartGP"),
         ("/about/team/", "Meet the team"),
-        ("/about/testimonials/", "Testimonials"),
-        ("/about/careers/", "Careers"),
+        ("/learn/", "Learn"),
+        ("/support/", "How it works"),
         ("/contact/", "Contact us"),
     ]),
-    ("Support", [
-        ("/support/", "FAQ and advice"),
-        ("/support/patient-resources/", "Patient resources"),
-        ("/learn/", "Learn about weight loss"),
-        ("/legal/complaints/", "Complaints procedure"),
-        ("/legal/accessibility/", "Accessibility statement"),
-    ]),
-    ("Legal", [
-        ("/legal/terms/", "Terms and conditions"),
+    ("Links", [
+        ("/legal/terms/", "Terms & Conditions"),
+        ("/legal/accessibility/", "Access statement"),
         ("/legal/privacy/", "Privacy policy"),
-        ("/legal/cookies/", "Cookie policy"),
-        ("/sitemap.xml", "Sitemap"),
+        ("/legal/complaints/", "Complaint & Feedback"),
+        ("/support/patient-resources/", "Patient resources"),
+        ("/support/", "FAQs"),
     ]),
 ]
 
