@@ -11,15 +11,22 @@ ORIGIN = "https://smartgp.co.uk"
 BRAND = {
     "name": "SmartGP",
     "tagline": "Private online weight loss service · United Kingdom",
-    "company": "Smartway Pharma Limited",
+    "blurb": "SmartGP is a private online weight loss clinic. Every patient has a "
+             "video consultation with a UK-registered clinician before any medicine "
+             "is prescribed. Medicines are dispensed by our GPhC-registered pharmacy.",
+    "company": "Smartway Pharma Ltd.",
     "company_no": "[company number]",
-    "office": "SmartRx Pharmacy, 10 Lyon Road, London SW19 2RL, United Kingdom",
-    "gphc": "[GPhC premises number]",
-    "superintendent": "Vinesh [surname]",
-    "superintendent_reg": "[GPhC registration number]",
+    "office": "Smartway Pharma Ltd., 10 Lyon Road, London SW19 2RL",
+    "owner": "Rachel Wood",
+    "gphc": "9010774",
+    "gphc_url": "https://www.pharmacyregulation.org/registers/pharmacy/registrationnumber/9010774",
+    "superintendent": "Vinesh Solanki",
+    "superintendent_reg": "2217378",
     "cqc": "[CQC provider ID] — registration position pending (DEC-03)",
-    "phone": "[clinic telephone]",
-    "email": "hello@smartgp.co.uk",
+    "phone": "0208 545 7731",
+    "phone_href": "+442085457731",
+    "email": "info@smartgp.co.uk",
+    "hours": "Mon – Fri, 9am to 5.30pm",
 }
 
 # Primary navigation follows the BRD (Section 7.4): Clinic, Learn, Support,
